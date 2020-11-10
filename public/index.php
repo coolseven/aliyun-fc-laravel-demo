@@ -55,6 +55,8 @@ $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );
 
+dump($request,app('router')->getRoutes(),app('router')->current());
+
 $response->send();
 
 $kernel->terminate($request, $response);

@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::any('/hello-world', 'AppController@helloWorld');
 Route::any('/inspire', 'AppController@inspire');
-Route::any('/', 'AppController@inspire');
+Route::any('/', function(){
+    return view('welcome');
+});
